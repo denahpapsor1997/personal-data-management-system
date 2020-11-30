@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my login page</title>
+</head>
+<body onload="load()">
+	<form action="try.php" method="POST" enctype="multipart/form-data" charset="utf-8" id="deno">
+		
+		<label for="name">Name</label><input type="text" name="name" id="nme" required="required"> <br>
+
+		<span id="den"></span>
+
+		<label for="mobile">Mobile</label> <input type="number" name="mobile" id="mbe" > <br>
+		<span id="m1"></span>
+
+		<label for="email">Email</label> <input type="text" name="email" id="ema"> <br>
+		<span id="m5"></span>
+
+		<label for="password">Password</label> <input type="password" name="password" id="pas" > <br>
+		<span id="m2"></span>
+		
+		<button type="button" onclick="return papa();">register here</button>
+	</form>
+<script type="text/javascript">
+	function papa(){
+		var name=document.getElementById('den');
+		var x=document.getElementById('nme').value;
+		var mobile=document.getElementById('m1');
+		var password=document.getElementById('m2');
+		var y=document.getElementById('mbe').value;
+		var pass=document.getElementById('pas').value;
+		var email=document.getElementById('m5');
+		var w=document.getElementById('ema').value;
+		{
+			if (x.length == "") {
+				name.innerHTML="name is required"
+				name.style.color="red";
+				return true;
+			}
+			if (y.length == "") {
+				mobile.innerHTML="mobile cannot be empty"
+				mobile.style.color="red";
+				return true;
+			}
+			if (pass.length == "") {
+				password.innerHTML="password cannot be empty"
+				password.style.color="red";
+				return true;
+			}
+			if (w.length == "") {
+				email.innerHTML="email cannot be empty"
+				email.style.color="red";
+				return true;
+			}
+
+			else{
+             document.getElementById('deno').submit();
+			}
+		}
+
+	}
+ 
+</script>
+
+</body>
+</html>

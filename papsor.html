@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="papsor.css">
+	<title>my code</title>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("p").hide();
+			})
+		})
+	</script>
+</head>
+<body>
+	<h3>this is my jquerry element</h3>
+	<p>paragraph</p>
+	<button> click me to hide</button>
+	<h1 style="text-align: center;">REGISTRATION FORM</h1>
+	<form name="RegForm" id="pes" action=" /submit.php" method="post">
+		<p>Name: <input id="pe" type="text" name="Name"></p>
+		<span id="errorname"></span>
+
+		<p>Address: <input id="ses" type="text" name="Address"></p>
+		<span id="des"></span>
+
+		<p>Email address: <input id="pepe" type="text" name="Email"></p>
+		<span id="con"></span>
+
+		<p>Password: <input type="Password" name="Password"></p>
+		<p>
+			SELECT THE COURSE
+			<select type="text" value="" name="subject" >
+				<option>BTECH</option>
+				<option>BBA</option>
+				<option> BSC COMP SCIENCE</option>
+				<option>BCOMM</option>
+			</select>
+		</p>
+
+		<p>Telephone: <input type="text" name="Telephone"></p>
+        <button type="button" onclick="return papa();">register</button>
+	</form>
+	<script type="text/javascript">
+		function papa(){
+		var error=document.getElementById("errorname");
+		var form=document.getElementById("pes");
+		var x=document.getElementById("pe").value;
+		//var x1=document.getElementById("ses").value;
+		var address=document.getElementById("des");
+		var y=document.getElementById("ses").value;
+		var email=document.getElementById("con");
+		var z=document.getElementById("pepe").value
+		if (x.length <= 0) {
+
+            error.innerHTML="this field is required"
+			error.style.color="red";
+			return true;
+		//	errorname.innerHTML="The name is too short";
+		//document.getElementById("pes").submit();
+		}
+		if (y.length <= 0) {
+            address.innerHTML="this field is required"
+			address.style.color="red";
+			return true;
+		//	errorname.innerHTML="The name is too short";
+		//;
+		}
+		if (z.length == " ") {
+			email.innerHTML="email address cannot be empty"
+			email.style.color="red";
+		}
+		else {
+			document.getElementById("pes").submit()
+
+		}
+			
+		
+		}
+	</script>
+	<ul>
+		<li><a>Home</a></li>
+		<li><a>News</a>
+			<ul>
+				<li>sports</li>
+				<li>academics</li>
+				<li>politics</li>
+			</ul>
+		</li>
+		<li><a>Contact us</a>
+			<ul>
+				<li>twitter handle</li>
+				<li>phone number:</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>
